@@ -1,0 +1,238 @@
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-k8q4t[0m
+{"level":"warn","ts":1568850963.3264701,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568850963.3269362,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-jk8pq[0m
+{"level":"warn","ts":1568850966.3369908,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568850966.3386142,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-sunnypinto-trial-repo-mast-j4cwx[0m
+{"level":"warn","ts":1568850974.6264396,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568850975.066788,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**********/trial-repo.git @ a1a71d57fafc26da3f6b9e3fb806e891c27603f1 in path /workspace/source"}
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:a1a71d57fafc26da3f6b9e3fb806e891c27603f1
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: ** step next-version --use-git-tag-only --tag
+created new version: 0.0.1 and written to file: ./VERSION
+Tag v0.0.1 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for **********-trial-repo-master-1
+Applying changes 
+upserted PipelineResource **********-trial-repo-master for the git repository https://github.com/**********/trial-repo.git
+upserted Task **********-trial-repo-master-from-build-pack-1
+upserted Pipeline **********-trial-repo-master-1
+created PipelineRun **********-trial-repo-master-1
+created PipelineStructure **********-trial-repo-master-1
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-4w9g5[0m
+{"level":"warn","ts":1568850986.4431612,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568850986.4434686,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-7p8zk[0m
+{"level":"warn","ts":1568850987.5543165,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568850987.5558193,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-sunnypinto-trial-repo-master-rkgqt[0m
+{"level":"warn","ts":1568850995.5972521,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568850996.0338626,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**********/trial-repo.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:a1a71d57fafc26da3f6b9e3fb806e891c27603f1
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image jenkinsxio/jenkinsx:0.0.43 
+2019/09/18 23:56:38 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:606384493cf478a906aa9e73daf83a96d51d40c87aba6631f6a961b036e7653d: no such file or directory 
+[36mINFO[0m[0001] Downloading base image jenkinsxio/jenkinsx:0.0.43 
+2019/09/18 23:56:39 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Executing 0 build triggers                   
+[36mINFO[0m[0002] Using files from context: [/workspace/source/plugins.txt] 
+[36mINFO[0m[0002] Checking for cached layer 10.109.252.222:5000/todo/cache:be70219c30c4b0f287e76f771a06fe198a0b5849be7b4b98af0c3c3679d935f6... 
+2019/09/18 23:56:40 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] No cached layer found for cmd RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/myplugins.txt 
+[36mINFO[0m[0002] Unpacking rootfs as cmd RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/myplugins.txt requires it. 
+[36mINFO[0m[0029] Taking snapshot of full filesystem...        
+[36mINFO[0m[0031] Using files from context: [/workspace/source/plugins.txt] 
+[36mINFO[0m[0031] COPY plugins.txt /usr/share/jenkins/ref/myplugins.txt 
+[36mINFO[0m[0031] Taking snapshot of files...                  
+[36mINFO[0m[0031] RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/myplugins.txt 
+[36mINFO[0m[0031] cmd: /bin/sh                                 
+[36mINFO[0m[0031] args: [-c /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/myplugins.txt] 
+Creating initial locks...
+Analyzing war...
+Registering preinstalled plugins...
+Using version-specific update center: https://updates.jenkins.io/2.150...
+Downloading plugins...
+Downloading plugin: greenballs from https://updates.jenkins.io/download/plugins/greenballs/1.15/greenballs.hpi
+
+WAR bundled plugins:
+
+
+Installed plugins:
+ace-editor:1.1
+ant:1.9
+apache-httpcomponents-client-4-api:4.5.5-3.0
+artifactory:2.16.2
+authentication-tokens:1.3
+blueocean-autofavorite:1.2.2
+blueocean-bitbucket-pipeline:1.9.0
+blueocean-commons:1.9.0
+blueocean-config:1.9.0
+blueocean-core-js:1.9.0
+blueocean-dashboard:1.9.0
+blueocean-display-url:2.2.0
+blueocean-events:1.9.0
+blueocean-git-pipeline:1.9.0
+blueocean-github-pipeline:1.9.0
+blueocean-i18n:1.9.0
+blueocean-jira:1.9.0
+blueocean-jwt:1.9.0
+blueocean-personalization:1.9.0
+blueocean-pipeline-api-impl:1.9.0
+blueocean-pipeline-editor:1.9.0
+blueocean-pipeline-scm-api:1.9.0
+blueocean-rest-impl:1.9.0
+blueocean-rest:1.9.0
+blueocean-web:1.9.0
+blueocean:1.9.0
+bouncycastle-api:2.17
+branch-api:2.1.2
+cloudbees-bitbucket-branch-source:2.4.0
+cloudbees-folder:6.7
+command-launcher:1.2
+config-file-provider:3.4.1
+configuration-as-code:1.3
+credentials-binding:1.17
+credentials:2.1.18
+display-url-api:2.3.0
+docker-commons:1.13
+docker-workflow:1.17
+durable-task:1.28
+favorite:2.3.2
+git-client:2.7.4
+git-server:1.7
+git:3.9.1
+gitea:1.0.8
+github-api:1.95
+github-branch-source:2.4.1
+github:1.29.3
+gitlab-plugin:1.5.11
+gradle:1.29
+greenballs:1.15
+handlebars:1.1.1
+handy-uri-templates-2-api:2.1.6-1.0
+htmlpublisher:1.17
+ivy:1.28
+jackson2-api:2.9.8
+javadoc:1.4
+jenkins-design-language:1.9.0
+jira:3.0.5
+jquery-detached:1.2.1
+jsch:0.1.54.2
+junit:1.26.1
+**-resources:1.0.24
+kubernetes-credentials-provider:0.10
+kubernetes-credentials:0.4.0
+kubernetes:1.13.7
+lockable-resources:2.3
+mailer:1.22
+matrix-project:1.13
+maven-plugin:3.2
+mercurial:2.4
+metrics:4.0.2.2
+momentjs:1.1.1
+pipeline-build-step:2.7
+pipeline-graph-analysis:1.9
+pipeline-input-step:2.8
+pipeline-milestone-step:1.3.1
+pipeline-model-api:1.3.3
+pipeline-model-declarative-agent:1.1.1
+pipeline-model-definition:1.3.3
+pipeline-model-extensions:1.3.3
+pipeline-rest-api:2.10
+pipeline-stage-step:2.3
+pipeline-stage-tags-metadata:1.3.3
+pipeline-stage-view:2.10
+plain-credentials:1.4
+pubsub-light:1.12
+resource-disposer:0.12
+scm-api:2.3.0
+script-security:1.49
+sse-gateway:1.16
+ssh-credentials:1.14
+structs:1.17
+support-core:2.52
+token-macro:2.5
+variant:1.1
+workflow-aggregator:2.6
+workflow-api:2.33
+workflow-basic-steps:2.13
+workflow-cps-global-lib:2.12
+workflow-cps:2.61
+workflow-durable-task-step:2.26
+workflow-job:2.30
+workflow-multibranch:2.20
+workflow-scm-step:2.7
+workflow-step-api:2.17
+workflow-support:2.23
+ws-cleanup:0.36
+Cleaning up locks
+[36mINFO[0m[0035] Taking snapshot of full filesystem...        
+[36mINFO[0m[0037] Pushing layer 10.109.252.222:5000/todo/cache:be70219c30c4b0f287e76f771a06fe198a0b5849be7b4b98af0c3c3679d935f6 to cache now 
+2019/09/18 23:57:15 pushed blob: sha256:b821871d0107d105852a240739b483a93f8b3173830214a07d52a18bebfd6c2b
+2019/09/18 23:57:15 pushed blob: sha256:733eae6f438f187ff600950399ed57d9e9d65d5664da8d70dc05cadbd46acf13
+2019/09/18 23:57:15 10.109.252.222:5000/todo/cache:be70219c30c4b0f287e76f771a06fe198a0b5849be7b4b98af0c3c3679d935f6: digest: sha256:2b468f815a5aee795ee6cd2055c8a394bbc66d9ef401509ebc27b1dbaa5616db size: 427
+2019/09/18 23:57:15 pushed blob: sha256:733eae6f438f187ff600950399ed57d9e9d65d5664da8d70dc05cadbd46acf13
+2019/09/18 23:57:15 pushed blob: sha256:5e138c56df0cd52a31fcffd8404ad547c3f2c0f811b3e73789b94e52c2930316
+2019/09/18 23:57:15 pushed blob: sha256:8e98866ade16bfd30cae3c990a237dc050fee55e78293207cecb1c079693977e
+2019/09/18 23:57:15 pushed blob: sha256:812a6dcaec854931e31d0c88e7b77ef4e878486b681e7a1d5735f59f13900e32
+2019/09/18 23:57:15 pushed blob: sha256:82e1d004f30849390ed0f7fadbbefdd4a0c116d537d2f69ac1fee078c510be9e
+2019/09/18 23:57:15 pushed blob: sha256:38f6dd39b85823bd8b7dedf55493b2571443143909aa32cecfcce74bf0280d18
+2019/09/18 23:57:15 pushed blob: sha256:deac9051b7388f7b01c1cf4a5d51eeab1f8e1fe307f64d395627ece2fdba9f71
+2019/09/18 23:57:15 pushed blob: sha256:73ce08fe35725d6c8aebc13da9fcd964c350db31609ee6c104a355cb66be9c99
+2019/09/18 23:57:15 pushed blob: sha256:73dae24989f4b7d5e9ffab8e282103fd96960a02525281093fac8c2fac3e3e35
+2019/09/18 23:57:15 pushed blob: sha256:3665ad25ef383c06bd6f06320a2c23055e4601fb62737ab623295129d6a8cc34
+2019/09/18 23:57:15 pushed blob: sha256:756eeba3b1675e8c81588c35921ccc63296ec532776556aaea5cc739cbf57f1a
+2019/09/18 23:57:15 pushed blob: sha256:43e0730514ffad1a18c952b64cb142bc90d2fb8dae84958e7f4cbe0f45fc77fd
+2019/09/18 23:57:16 pushed blob: sha256:30d9dea4b0111d181c33805e3ed2ff9cc8651d029109c7f3a9ebea636ccdddce
+2019/09/18 23:57:16 pushed blob: sha256:9cc3a2096311b93043dc9fa430f30d53e90840fc05dc8afaeede55b2567d5220
+2019/09/18 23:57:16 pushed blob: sha256:2747e6c8d8199a7e6ecf647edcf44e82f73293fd8360901529a14f447f574f61
+2019/09/18 23:57:16 pushed blob: sha256:8a61e19ddca3712d892065e655ad1c8596d076e524b6024106207325f9ec017a
+2019/09/18 23:57:16 pushed blob: sha256:492e724a2ef48c628f4358ab5789096cbd74347f95a1cf4e5b758d400d3723df
+2019/09/18 23:57:16 pushed blob: sha256:35c66b68003d528ed32d7429fe63d2960ae496fa5f2f0f802c2111f1cfed0276
+2019/09/18 23:57:16 pushed blob: sha256:4605281e072a26ab18534ee9b56b16520726f7166098697caebc7c41881e64eb
+2019/09/18 23:57:16 pushed blob: sha256:a3c027b2f9fb6001d8375a82fd75eedfa8bb86d364b31a6b6c0e1da1549a0e3e
+2019/09/18 23:57:16 pushed blob: sha256:04fd513cac7e4bcb5c4fa21a8b30fb234b9810c9666902c74ef928dacfb0d750
+2019/09/18 23:57:16 pushed blob: sha256:dbac173c1029141c329d94ba5905a5488390751b7d1bd1077029fa117f9a6e59
+2019/09/18 23:57:19 pushed blob: sha256:a5a6f2f73cd8abbdc55d0df0d8834f7262713e87d6c8800ea3851f103025e0f0
+2019/09/18 23:57:19 pushed blob: sha256:bf691e1ca659eae6941500304d390feff5d00d2158ca95edf9dfb3838960009c
+2019/09/18 23:57:20 pushed blob: sha256:13376592ef33a87170689fba7158355deb71e02150a1732c5aca8234e86e2890
+2019/09/18 23:57:22 pushed blob: sha256:3c22fac40b66caf65eaefa65a5e2f8876e638cfa16a591a64670887bbb6a0540
+2019/09/18 23:57:23 pushed blob: sha256:3a40bc726b4e46183d63528d45b4a4f0c7b628ea2b4ca572e28f780a79d073c1
+2019/09/18 23:57:24 pushed blob: sha256:da10371a0dd3566855b31d7f06a01c5dd2a1a98f688259dda6545299ec5a0408
+2019/09/18 23:57:24 10.109.252.222:5000/**********/trial-repo:0.0.1: digest: sha256:32da7270d5ea19f4bc9c9aad9fca3973c189e462351704fdd3be405f0cd2e6d3 size: 4634
+
+Showing logs for build [32msunnypinto-trial-repo-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source to an unshallow repository
+no previous commit version found so change diff unavailable
